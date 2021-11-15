@@ -4,29 +4,131 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Open+Sans:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/styles.css" />
     <title>Your Weather Dashboard</title>
 </head>
 
 <body>
     <header>
-        <h1>Your Weather Dashboard</h1>
+        <div class="header-box" id="header-grad">
+            <h1 id="header-text">Your Weather Dashboard</h1>
+        </div>
     </header>
 
-    <main>
+    <main class="page-content">
         <!-- City Search Section -->
-        <div>
+        <div class="search-box">
+            <h2 id="search-head-text">Search for a City:</h2>
+            <input id="search-input">
+            <div class="search-btn-box">
+                <button id="search-btn">Search</button>
+            </div>
+            <ul class="search-history">
 
+            </ul>
         </div>
 
-        <!-- Current Weather in Selected City Section -->
-        <div>
+        <div class="current-forecast-container">
+            <!-- Current Weather in Selected City Section -->
+            <div class="current-weather-box">
+                <h2 id="current-head-text">Currently in <span></span>:</h2>
+                <ul class="current-conditions">
+                    <li id="temp">
+                        Temperature:
+                    </li>
+                    <li id="wind">
+                        Wind:
+                    </li>
+                    <li id="humidity">
+                        Humidity:
+                    </li>
+                    <li id="uv">
+                        UV Index:
+                    </li>
+                </ul>
+            </div>
 
-        </div>
+            <!-- 5 Day Forecast Section -->
+            <div class="forecast-section">
+                <h3 id="forecast-head-text">5-Day Forecast:</h3>
+                <div class="forecast-container">
+                    <div class="forecast-box">
+                        <h4 class="forecast-date">11/16/2021</h4>
+                        <ul class="forecast-stats">
+                            <li>
+                                Temp:
+                            </li>
+                            <li>
+                                Wind:
+                            </li>
+                            <li>
+                                Humidity:
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="forecast-box">
+                        <h4 class="forecast-date">11/17/2021</h4>
+                        <ul class="forecast-stats">
+                            <li>
+                                Temp:
+                            </li>
+                            <li>
+                                Wind:
+                            </li>
+                            <li>
+                                Humidity:
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="forecast-box">
+                        <h4 class="forecast-date">11/18/2021</h4>
+                        <ul class="forecast-stats">
+                            <li>
+                                Temp:
+                            </li>
+                            <li>
+                                Wind:
+                            </li>
+                            <li>
+                                Humidity:
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="forecast-box">
+                        <h4 class="forecast-date">11/19/2021</h4>
+                        <ul class="forecast-stats">
+                            <li>
+                                Temp:
+                            </li>
+                            <li>
+                                Wind:
+                            </li>
+                            <li>
+                                Humidity:
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="forecast-box">
+                        <h4 class="forecast-date">11/20/2021</h4>
+                        <ul class="forecast-stats">
+                            <li>
+                                Temp:
+                            </li>
+                            <li>
+                                Wind:
+                            </li>
+                            <li>
+                                Humidity:
+                            </li>
+                        </ul>
+                        
+                    </div>
 
-        <!-- 5 Day Forecast Section -->
-        <div>
-            
+                </div>
+            </div>
         </div>
     </main>
     
