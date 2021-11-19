@@ -82,6 +82,19 @@ var getCityGeo = function(city) {
                                 currentHumidEl.textContent = "Humidity: " + currentHumid + "%";
                                 var currentUv = data.current.uvi;
                                 currentUvEl.textContent = "UV Index: " + currentUv;
+
+                                if (currentUv < 3) {
+                                    document.getElementById("current-uv").style.color = "#66ff00";
+                                } else if (currentUv >= 3 && currentUv < 6) {
+                                    document.getElementById("current-uv").style.color = "#ffff00";                                    
+                                } else if (currentUv >= 6 && currentUv < 8) {
+                                    document.getElementById("current-uv").style.color = "#ffa500";
+                                } else if (currentUv >= 8 && currentUv < 11) {
+                                    document.getElementById("current-uv").style.color = "#ff160c";
+                                } else {
+                                    document.getElementById("current-uv").style.color = "#bf40bf";
+                                }
+
                                 var currentDate = new Date((data.current.dt) * 1000);
                                 currentDateEl.textContent = (currentDate.toLocaleDateString());
                                 var currentIcon = data.current.weather[0].icon;
