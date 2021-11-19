@@ -107,6 +107,8 @@ var getCityGeo = function(city) {
                                 var dayOneIcon = data.daily[1].weather[0].icon;
                                 var dayOneIconUrl = "http://openweathermap.org/img/wn/" + dayOneIcon + "@2x.png";
                                 dayOneIconEl.setAttribute("src", dayOneIconUrl);
+                                document.getElementById("day-one-icon").width = "60";
+                                document.getElementById("day-one-icon").height = "60";
                                 var dayOneTempMax = Math.floor(data.daily[1].temp.max);
                                 var dayOneTempMin = Math.floor(data.daily[1].temp.min);
                                 dayOneTempEl.textContent = "Temp: " + dayOneTempMax + "/" + dayOneTempMin + " F";
@@ -120,7 +122,9 @@ var getCityGeo = function(city) {
                                 dayTwoDateEl.textContent = (dayTwoDate.toLocaleDateString());
                                 var dayTwoIcon = data.daily[2].weather[0].icon;
                                 var dayTwoIconUrl = "http://openweathermap.org/img/wn/" + dayTwoIcon + "@2x.png";
-                                dayTwoIconEl.setAttribute("src", dayTwoIconUrl);                               
+                                dayTwoIconEl.setAttribute("src", dayTwoIconUrl);
+                                document.getElementById("day-two-icon").width = "60";
+                                document.getElementById("day-two-icon").height = "60";                              
                                 var dayTwoTempMax = Math.floor(data.daily[2].temp.max);
                                 var dayTwoTempMin = Math.floor(data.daily[2].temp.min);
                                 dayTwoTempEl.textContent = "Temp: " + dayTwoTempMax + "/" + dayTwoTempMin + " F";
@@ -134,7 +138,9 @@ var getCityGeo = function(city) {
                                 dayThreeDateEl.textContent = (dayThreeDate.toLocaleDateString());
                                 var dayThreeIcon = data.daily[3].weather[0].icon;
                                 var dayThreeIconUrl = "http://openweathermap.org/img/wn/" + dayThreeIcon + "@2x.png";
-                                dayThreeIconEl.setAttribute("src", dayThreeIconUrl);                             
+                                dayThreeIconEl.setAttribute("src", dayThreeIconUrl);
+                                document.getElementById("day-three-icon").width = "60";
+                                document.getElementById("day-three-icon").height = "60";                            
                                 var dayThreeTempMax = Math.floor(data.daily[3].temp.max);
                                 var dayThreeTempMin = Math.floor(data.daily[3].temp.min);
                                 dayThreeTempEl.textContent = "Temp: " + dayThreeTempMax + "/" + dayThreeTempMin + " F";
@@ -148,7 +154,9 @@ var getCityGeo = function(city) {
                                 dayFourDateEl.textContent = (dayFourDate.toLocaleDateString());
                                 var dayFourIcon = data.daily[4].weather[0].icon;
                                 var dayFourIconUrl = "http://openweathermap.org/img/wn/" + dayFourIcon + "@2x.png";
-                                dayFourIconEl.setAttribute("src", dayFourIconUrl);                              
+                                dayFourIconEl.setAttribute("src", dayFourIconUrl);
+                                document.getElementById("day-four-icon").width = "60";
+                                document.getElementById("day-four-icon").height = "60";                             
                                 var dayFourTempMax = Math.floor(data.daily[4].temp.max);
                                 var dayFourTempMin = Math.floor(data.daily[4].temp.min);
                                 dayFourTempEl.textContent = "Temp: " + dayFourTempMax + "/" + dayFourTempMin + " F";
@@ -162,7 +170,9 @@ var getCityGeo = function(city) {
                                 dayFiveDateEl.textContent = (dayFiveDate.toLocaleDateString());
                                 var dayFiveIcon = data.daily[5].weather[0].icon;
                                 var dayFiveIconUrl = "http://openweathermap.org/img/wn/" + dayFiveIcon + "@2x.png";
-                                dayFiveIconEl.setAttribute("src", dayFiveIconUrl);                               
+                                dayFiveIconEl.setAttribute("src", dayFiveIconUrl);
+                                document.getElementById("day-five-icon").width = "60";
+                                document.getElementById("day-five-icon").height = "60";                              
                                 var dayFiveTempMax = Math.floor(data.daily[5].temp.max);
                                 var dayFiveTempMin = Math.floor(data.daily[5].temp.min);
                                 dayFiveTempEl.textContent = "Temp: " + dayFiveTempMax + "/" + dayFiveTempMin + " F";

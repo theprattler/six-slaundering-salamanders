@@ -125,6 +125,7 @@
 
 #current-date {
     color: var(--field-text);
+    padding-right: 7px;
 }
 
 .forecast-container {
@@ -152,7 +153,17 @@
 
 .forecast-date {
     color: var(--field-text);
-    
+    font-size: 18px;
+    margin: 22px 0 0 0;
+}
+
+.forecast-stats {
+    margin: 10px 0;
+}
+
+.forecast-stats-icons {
+    display: flex;
+    justify-content: center;
 }
 
 .forecast-stats-text {
