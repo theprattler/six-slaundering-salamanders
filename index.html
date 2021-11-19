@@ -24,7 +24,7 @@
         <form class="search-box" id="search-box">
             <h2 id="search-head-text">Search for a City:</h2>
             
-            <input id="search-input">
+            <input id="search-input" placeholder="City Name">
             <div class="search-btn-box">
                 <button id="search-btn">Search</button>
             </div>
@@ -37,21 +37,31 @@
 
             <!-- Current Weather in Selected City Section -->
             <div class="current-weather-box">
-                <h2 id="current-head-text">Currently in <span id="current-city"></span>:</h2>
-                <ul class="current-conditions">
-                    <li class="current-text" id="current-temp">
-                        Temperature:
-                    </li>
-                    <li class="current-text" id="current-wind">
-                        Wind:
-                    </li>
-                    <li class="current-text" id="current-humid">
-                        Humidity:
-                    </li>
-                    <li class="current-text" id="current-uv">
-                        UV Index:
-                    </li>
-                </ul>
+                <div class="current-weather-containers" id="current-weather-left">
+                    <h2 id="current-head-text">Currently in <span id="current-city"></span>:</h2>
+                    <ul class="current-conditions">
+                        <li class="current-text" id="current-temp">
+                            Temperature:
+                        </li>
+                        <li class="current-text" id="current-wind">
+                            Wind:
+                        </li>
+                        <li class="current-text" id="current-humid">
+                            Humidity:
+                        </li>
+                        <li class="current-text" id="current-uv">
+                            UV Index:
+                        </li>
+                    </ul>
+                </div>
+                <div class="current-weather-containers" id="current-weather-right">
+                    <div>
+                        <h3 id="current-date"></h3>
+                    </div>
+                    <div>
+                        <image id="current-icon" src=""></image>
+                    </div>
+                </div>
             </div>
 
             <!-- 5 Day Forecast Section -->
@@ -61,6 +71,9 @@
                     <div class="forecast-box">
                         <h4 class="forecast-date" id="day-one-date"></h4>
                         <ul class="forecast-stats">
+                            <li class="forecast-stats-icons">
+                                <image id="day-one-icon" src="">
+                            </li>
                             <li class="forecast-stats-text" id="day-one-temp">
                                 Temp:
                             </li>
@@ -75,6 +88,9 @@
                     <div class="forecast-box">
                         <h4 class="forecast-date" id="day-two-date"></h4>
                         <ul class="forecast-stats">
+                            <li class="forecast-stats-icons">
+                                <image id="day-two-icon" src="">
+                            </li>
                             <li class="forecast-stats-text" id="day-two-temp">
                                 Temp:
                             </li>
@@ -89,6 +105,9 @@
                     <div class="forecast-box">
                         <h4 class="forecast-date" id="day-three-date"></h4>
                         <ul class="forecast-stats">
+                            <li class="forecast-stats-icons">
+                                <image id="day-three-icon" src="">
+                            </li>
                             <li class="forecast-stats-text" id="day-three-temp">
                                 Temp:
                             </li>
@@ -103,6 +122,9 @@
                     <div class="forecast-box">
                         <h4 class="forecast-date" id="day-four-date"></h4>
                         <ul class="forecast-stats">
+                            <li class="forecast-stats-icons">
+                                <image id="day-four-icon" src="">
+                            </li>
                             <li class="forecast-stats-text" id="day-four-temp">
                                 Temp:
                             </li>
@@ -117,6 +139,9 @@
                     <div class="forecast-box">
                         <h4 class="forecast-date" id="day-five-date"></h4>
                         <ul class="forecast-stats">
+                            <li class="forecast-stats-icons">
+                                <image id="day-five-icon" src="">
+                            </li>
                             <li class="forecast-stats-text" id="day-five-temp">
                                 Temp:
                             </li>

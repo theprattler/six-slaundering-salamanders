@@ -2,6 +2,12 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary: blue;
+    --secondary: indigo;
+    --field-text: white;
+}
+
 .header-box {
     display: flex;
     background-color: blue;
@@ -11,12 +17,12 @@
 }
 
 #header-grad {
-    background-image: linear-gradient(to right, blue, indigo);
+    background-image: linear-gradient(to right, var(--primary), var(--secondary));
 }
 
 #header-text {
     display: flex;
-    color: white;
+    color: var(--field-text);
     text-align: center;
     font-size: 40px;
 }
@@ -57,9 +63,9 @@
 #search-btn {
     width: 100%;
     height: 35px;
-    background-color: blue;
+    background-color: var(--primary);
     color: white;
-    border: 1px solid blue;
+    border: 1px solid var(--primary);
     border-radius: 5px;
     opacity: .6;
 }
@@ -75,13 +81,14 @@
     align-self: stretch;
     width: 60%;
     margin-right: 25px;
-    
 }
 
 .current-weather-box {
-    border: 1px solid black;
     margin-top: 15px;
     border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(to right, var(--primary), var(--secondary));
 }
 
 .current-conditions {
@@ -91,11 +98,24 @@
 
 #current-head-text {
     padding-left: 7px;
+    color: var(--field-text);
 }
 
 .current-text {
     padding: 0 0 7px 7px;
     font-size: 18px;
+    color: var(--field-text);
+}
+
+#current-weather-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#current-date {
+    color: var(--field-text);
 }
 
 .forecast-container {
@@ -105,22 +125,28 @@
 }
 
 .forecast-box {
-    background-image: linear-gradient(to right, blue, indigo);
+    background-image: linear-gradient(to right, var(--primary), var(--secondary));
     width: 17%;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .forecast-stats {
     list-style-type: none;
     padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
 }
 
 .forecast-date {
-    color: white;
+    color: var(--field-text);
     padding-left: 7px;
 }
 
 .forecast-stats-text {
-    color: white;
+    color: var(--field-text);
     padding-left: 7px;
 }
