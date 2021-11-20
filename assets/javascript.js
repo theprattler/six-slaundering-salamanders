@@ -3,6 +3,7 @@ var searchBoxEl = document.querySelector("#search-box");
 var searchInputEl = document.querySelector("#search-input");
 
 // search history elements
+var searchAgainBtnEl = document.querySelector(".search-again-btn");
 var cityOneBtnEl = document.querySelector("#city-one-button");
 var cityTwoBtnEl = document.querySelector("#city-two-button");
 var cityThreeBtnEl = document.querySelector("#city-three-button");
@@ -85,6 +86,41 @@ var formSubmitHandler = function(event) {
     savedCities.push(cityName);
     localStorage.setItem("cities", JSON.stringify(savedCities));
     
+};
+
+var formResubmitHandlerOne = function() {
+    var cityName = cityOneBtnEl.innerHTML;
+    if (cityName) {
+        getCityGeo(cityName);
+    }
+};
+
+var formResubmitHandlerTwo = function() {
+    var cityName = cityTwoBtnEl.innerHTML;
+    if (cityName) {
+        getCityGeo(cityName);
+    }
+};
+
+var formResubmitHandlerThree = function() {
+    var cityName = cityThreeBtnEl.innerHTML;
+    if (cityName) {
+        getCityGeo(cityName);
+    }
+};
+
+var formResubmitHandlerFour = function() {
+    var cityName = cityFourBtnEl.innerHTML;
+    if (cityName) {
+        getCityGeo(cityName);
+    }
+};
+
+var formResubmitHandlerFive = function() {
+    var cityName = cityFiveBtnEl.innerHTML;
+    if (cityName) {
+        getCityGeo(cityName);
+    }
 };
 
 //savedCities.forEach(retreiveCities);
@@ -227,3 +263,9 @@ var getCityGeo = function(city) {
 };
 
 searchBoxEl.addEventListener("submit", formSubmitHandler);
+
+cityOneBtnEl.addEventListener("click", formResubmitHandlerOne);
+cityTwoBtnEl.addEventListener("click", formResubmitHandlerTwo);
+cityThreeBtnEl.addEventListener("click", formResubmitHandlerThree);
+cityFourBtnEl.addEventListener("click", formResubmitHandlerFour);
+cityFiveBtnEl.addEventListener("click", formResubmitHandlerFive);
