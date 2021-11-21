@@ -104,7 +104,7 @@ p {
 .current-forecast-container {
     flex-direction: column;
     align-self: stretch;
-    width: 60%;
+    width: 65%;
     margin-right: 25px;
 }
 
@@ -150,6 +150,10 @@ p {
     justify-content: space-between;
 }
 
+#forecast-head-text {
+    font-size: 23px;
+}
+
 .forecast-box {
     background-image: linear-gradient(to right, var(--primary), var(--secondary));
     width: 17%;
@@ -181,5 +185,5 @@ p {
 
 .forecast-stats-text {
     color: var(--field-text);
-    font-size: 11px;
+    font-size: 13px;
 }
