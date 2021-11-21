@@ -8,6 +8,20 @@
     --field-text: white;
 }
 
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-family: "Montserrat", sans-serif;
+}
+
 .header-box {
     display: flex;
     background-color: blue;
@@ -108,12 +122,12 @@
 }
 
 #current-head-text {
-    padding-left: 7px;
+    padding-left: 17px;
     color: var(--field-text);
 }
 
 .current-text {
-    padding: 0 0 7px 7px;
+    padding: 0 0 7px 17px;
     font-size: 18px;
     color: var(--field-text);
 }
@@ -127,7 +141,7 @@
 
 #current-date {
     color: var(--field-text);
-    padding-right: 7px;
+    padding-right: 17px;
 }
 
 .forecast-container {
@@ -151,16 +165,13 @@
     display: flex;
     flex-direction: column;
     align-items: left;
+    margin: 10px 0;
 }
 
 .forecast-date {
     color: var(--field-text);
     font-size: 18px;
     margin: 22px 0 0 0;
-}
-
-.forecast-stats {
-    margin: 10px 0;
 }
 
 .forecast-stats-icons {
@@ -170,5 +181,5 @@
 
 .forecast-stats-text {
     color: var(--field-text);
-    
+    font-size: 11px;
 }

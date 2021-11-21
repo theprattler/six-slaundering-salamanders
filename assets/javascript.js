@@ -60,38 +60,53 @@ var dayFiveTempEl = document.querySelector("#day-five-temp");
 var dayFiveWindEl = document.querySelector("#day-five-wind");
 var dayFiveHumidEl = document.querySelector("#day-five-humid");
 
-
+// submit city name
 var formSubmitHandler = function(event) {
     event.preventDefault();
+    // trim any user included empty spaces
     var cityName = searchInputEl.value.trim();
 
-    if (cityName) {
-        getCityGeo(cityName);
-        searchInputEl.value = "";
+    
 
-        if (cityOneBtnEl.innerHTML === "undefined") {
-            cityOneBtnEl.innerHTML = cityName;
-        } else if (cityTwoBtnEl.innerHTML === "undefined") {
-            cityTwoBtnEl.innerHTML = cityName;
-        } else if (cityThreeBtnEl.innerHTML === "undefined") {
-            cityThreeBtnEl.innerHTML = cityName;
-        } else if (cityFourBtnEl.innerHTML === "undefined") { 
-            cityFourBtnEl.innerHTML = cityName;
-        } else if (cityFiveBtnEl.innerHTML === "undefined") {
-            cityFiveBtnEl.innerHTML = cityName;
-        }
+        if (cityName) {
+            getCityGeo(cityName);
+            // clear input field
+            searchInputEl.value = "";
+
+            // insert searched city name in search history buttons
+            if (cityOneBtnEl.innerHTML === "undefined") {
+                cityOneBtnEl.innerHTML = cityName;
+            } else if (cityTwoBtnEl.innerHTML === "undefined") {
+                cityTwoBtnEl.innerHTML = cityName;
+            } else if (cityThreeBtnEl.innerHTML === "undefined") {
+                cityThreeBtnEl.innerHTML = cityName;
+            } else if (cityFourBtnEl.innerHTML === "undefined") { 
+                cityFourBtnEl.innerHTML = cityName;
+            } else if (cityFiveBtnEl.innerHTML === "undefined") {
+                cityFiveBtnEl.innerHTML = cityName;
+            } else if (cityFiveBtnEl !== "undefined") {
+                cityOneBtnEl.innerHTML = cityName;
+            }
+        
     };
+    // push city to array and save to local storage
     savedCities.push(cityName);
     localStorage.setItem("saved cities", JSON.stringify(savedCities));
 };
 
-var savedCities = [];
 
+
+var savedCities = [];
+ 
+
+// load cities from local storage into search history buttons on page load
 var loadCities = function() {
     savedCities = JSON.parse(localStorage.getItem("saved cities"));
 
+    // create empty array if no array exists
     if (!savedCities) {
         savedCities = [];
+        
     }; 
     
     cityOneBtnEl.innerHTML = savedCities[0];
@@ -101,6 +116,7 @@ var loadCities = function() {
     cityFiveBtnEl.innerHTML = savedCities[4];
 };
 
+// resubmit search history cities
 var formResubmitHandlerOne = function() {
     var cityName = cityOneBtnEl.innerHTML;
     if (cityName) {
@@ -162,6 +178,7 @@ var getCityGeo = function(city) {
                                 var currentUv = data.current.uvi;
                                 currentUvEl.textContent = "UV Index: " + currentUv;
 
+                                // styling for UV Index threat level
                                 if (currentUv < 3) {
                                     document.getElementById("current-uv").style.color = "#66ff00";
                                 } else if (currentUv >= 3 && currentUv < 6) {
