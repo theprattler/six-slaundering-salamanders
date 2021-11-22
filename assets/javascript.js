@@ -66,8 +66,6 @@ var formSubmitHandler = function(event) {
     // trim any user included empty spaces
     var cityName = searchInputEl.value.trim();
 
-    
-
         if (cityName) {
             getCityGeo(cityName);
             // clear input field
@@ -94,11 +92,8 @@ var formSubmitHandler = function(event) {
     localStorage.setItem("saved cities", JSON.stringify(savedCities));
 };
 
-
-
 var savedCities = [];
  
-
 // load cities from local storage into search history buttons on page load
 var loadCities = function() {
     savedCities = JSON.parse(localStorage.getItem("saved cities"));
