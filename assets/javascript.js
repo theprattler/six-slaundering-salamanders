@@ -66,30 +66,23 @@ var formSubmitHandler = function(event) {
     // trim any user included empty spaces
     var cityName = searchInputEl.value.trim();
 
-        if (cityName) {
-            getCityGeo(cityName);
-            // clear input field
-            searchInputEl.value = "";
+    if (cityName) {
+        getCityGeo(cityName);
+        // clear input field
+        searchInputEl.value = "";
 
-            // insert searched city name in search history buttons
-            if (cityOneBtnEl.innerHTML === "undefined") {
-                cityOneBtnEl.innerHTML = cityName;
-            } else if (cityTwoBtnEl.innerHTML === "undefined") {
-                cityTwoBtnEl.innerHTML = cityName;
-            } else if (cityThreeBtnEl.innerHTML === "undefined") {
-                cityThreeBtnEl.innerHTML = cityName;
-            } else if (cityFourBtnEl.innerHTML === "undefined") { 
-                cityFourBtnEl.innerHTML = cityName;
-            } else if (cityFiveBtnEl.innerHTML === "undefined") {
-                cityFiveBtnEl.innerHTML = cityName;
-            } else if (cityFiveBtnEl !== "undefined") {
-                cityOneBtnEl.innerHTML = cityName;
-            }
-        
+        // insert searched city name in search history buttons
+        cityOneBtnEl.innerHTML = cityName;
+        cityTwoBtnEl.innerHTML = cityName;
+        cityThreeBtnEl.innerHTML = cityName;
+        cityFourBtnEl.innerHTML = cityName;
+        cityFiveBtnEl.innerHTML = cityName;
+        cityOneBtnEl.innerHTML = cityName;
     };
     // push city to array and save to local storage
-    savedCities.push(cityName);
+    savedCities.unshift(cityName);
     localStorage.setItem("saved cities", JSON.stringify(savedCities));
+    loadCities();
 };
 
 var savedCities = [];
