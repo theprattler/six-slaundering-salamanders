@@ -143,7 +143,7 @@ var formResubmitHandlerFive = function() {
 // entire function to pull from weather api
 var getCityGeo = function(city) {
     // get lat and lon coordinants for city entered in input field
-    var apiCityUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + city + "&appid=19ab10c89bb373b51a04dfc25fd32a48"
+    var apiCityUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&appid=19ab10c89bb373b51a04dfc25fd32a48"
     fetch(apiCityUrl).then(function(response) {
         response.json().then(function(data) {
             for (var i = 0; i < data.length; i++) {     
