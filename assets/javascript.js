@@ -5,15 +5,15 @@ var searchInputEl = document.querySelector("#search-input");
 // search history elements
 var searchAgainBtnEl = document.querySelector(".search-again-btn");
 var cityOneBtnEl = document.querySelector("#city-one-button");
-cityOneBtnEl.innerHTML = "";
+//cityOneBtnEl.innerHTML = "";
 var cityTwoBtnEl = document.querySelector("#city-two-button");
-cityTwoBtnEl.innerHTML = "";
+//cityTwoBtnEl.innerHTML = "";
 var cityThreeBtnEl = document.querySelector("#city-three-button");
-cityThreeBtnEl.innerHTML = "";
+//cityThreeBtnEl.innerHTML = "";
 var cityFourBtnEl = document.querySelector("#city-four-button");
-cityFourBtnEl.innerHTML = "";
+//cityFourBtnEl.innerHTML = "";
 var cityFiveBtnEl = document.querySelector("#city-five-button");
-cityFiveBtnEl.innerHTML = "";
+//cityFiveBtnEl.innerHTML = "";
 
 // current weather condition elements
 var currentHeadTextEl = document.querySelector("#current-head-text");
@@ -77,10 +77,10 @@ var formSubmitHandler = function(event) {
         cityThreeBtnEl.innerHTML = cityName;
         cityFourBtnEl.innerHTML = cityName;
         cityFiveBtnEl.innerHTML = cityName;
-        cityOneBtnEl.innerHTML = cityName;
+        //cityOneBtnEl.innerHTML = cityName;
     };
     // push city to array and save to local storage
-    savedCities.unshift(cityName);
+    savedCities.push(cityName);
     localStorage.setItem("saved cities", JSON.stringify(savedCities));
     loadCities();
 };
